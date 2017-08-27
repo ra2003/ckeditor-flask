@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-from flask import Flask, current_app
+from flask import Flask, current_app, render_template
 app = Flask(__name__)
 print("one")
 
 @app.route('/')
 def index():
-    return current_app.send_static_file('index.html')
+    return render_template('index.html')
     print("why")
 
 if __name__ == '__main__':
